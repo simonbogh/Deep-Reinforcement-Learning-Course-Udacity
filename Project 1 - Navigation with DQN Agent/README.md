@@ -6,6 +6,8 @@ Untrained agent:
 
 ![untrained](images/untrained_agent.gif)
 
+![scores_untrained](images/scores_during_training.jpg)
+
 Trained agent:
 
 ![trained](images/trained_agent.gif)
