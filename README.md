@@ -5,7 +5,7 @@ This repository presents my solutions to the projects for the Udacity Nanodegree
 ### Project 1: Navigation
 In this project an agent is trained to collect yellow bananas (+1) while avoiding blue bananas (-1) in a 3D world.
 
-The solution employs a Deep Q-Network (DQN) and learns to collect an average score of more than 13 after 280 episodes, but performance improves up to around 900 episodes.
+The solution employs a Deep Q-Network (DQN) and learns to collect an average score of more than 13 after 500 episodes, but performance improves up to around 900 episodes.
 
 The specific details and solution to the project can be found in the subfolder "Project 1 - Navigation with DQN Agent".
 
