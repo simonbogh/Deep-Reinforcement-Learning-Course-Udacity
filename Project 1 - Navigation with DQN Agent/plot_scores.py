@@ -14,24 +14,19 @@ import pylab
 # file_object = open(file_name, 'wb')     # Open the with writing rights (w)
 # pickle.dump(scores, file_object)        # Save scores to file
 # file_object.close()                     # Close the file
-
-
-scores_1 = pickle.load(open("model_32x32/scores.p", "rb"))
-scores_2 = pickle.load(open("model_64x64/scores.p", "rb"))
-scores_2b = pickle.load(open("model_64x64_lr_0.005/scores.p", "rb"))
-scores_2c = pickle.load(open("model_64x64_lr_0.0005/scores.p", "rb"))
-scores_3 = pickle.load(open("model_128x64/scores.p", "rb"))
-scores_4 = pickle.load(open("model_128x128/scores.p", "rb"))
-scores_5 = pickle.load(open("model_256x256/scores.p", "rb"))
-
+scores_1 = pickle.load(open("models_trained/model_32x32/scores.p", "rb"))
+scores_2 = pickle.load(open("models_trained/model_64x64/scores.p", "rb"))
+scores_2b = pickle.load(open("models_trained/model_64x64_lr_0.005/scores.p", "rb"))
+scores_2c = pickle.load(open("models_trained/model_64x64_lr_0.0005/scores.p", "rb"))
+scores_3 = pickle.load(open("models_trained/model_128x64/scores.p", "rb"))
+scores_4 = pickle.load(open("models_trained/model_128x128/scores.p", "rb"))
+scores_5 = pickle.load(open("models_trained/model_256x256/scores.p", "rb"))
 
 
 # Plot the scores
-
 # Simple data to display in various forms
 x = np.arange(len(scores_1))
 y = np.sin(x ** 2)
-
 
 # # Plot 2x2 subplots
 # fig, ((ax1, ax2), (ax3, ax4)) = plt.subplots(2, 2, sharex='col', sharey='row')
@@ -44,7 +39,6 @@ y = np.sin(x ** 2)
 # ax4.plot(x, scores_4)
 # ax4.set_title('128x128')
 # plt.show()
-
 
 fig = plt.figure()
 #plt.plot(np.arange(len(scores_1)), scores_1)
