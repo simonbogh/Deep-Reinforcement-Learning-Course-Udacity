@@ -23,6 +23,8 @@ Different learning rates were selected and tested with the (64,64) hidden layer 
 
 ε-greedy is applied as the policy. The reward function is based on providing +1 for a yellow banana, and -1 for a blue banana respectively with a discount rate ɣ = 0.99. A replay memory of size 100.000 was selected with mini-batch size of 64.
 
+ReLU (Rectified Linear Unit) is used for the activation function.
+
 ## Results
 Video: [YouTube.com](https://youtu.be/laOg6DYBc6c)
 
