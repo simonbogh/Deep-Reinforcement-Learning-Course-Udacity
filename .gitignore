@@ -104,3 +104,5 @@ venv.bak/
 .mypy_cache/
 
 \.DS_Store
+
+Project 1 - Navigation with DQN Agent/scores\.p
