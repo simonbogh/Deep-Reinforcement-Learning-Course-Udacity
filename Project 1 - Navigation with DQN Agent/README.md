@@ -21,7 +21,9 @@ Different sizes have been tried for the two hidden layers: (32,32), (64,64), (12
 
 Different learning rates were selected and tested with the (64,64) hidden layer sizes. The following learning rates were tested: 0.005, 0.001, and 0.0005. Se result section below for graphs.
 
-ε-greedy is applied as the policy. The reward function is based on providing +1 for a yellow banana, and -1 for a blue banana respectively with a discount rate ɣ = 0.99. A replay memory of size 100.000 was selected with mini-batch size of 64.
+ε-greedy is applied as the policy. Epsilon starts at 1.0, decays with a rate of 0.995, and ends at a minimum of 0.1. 
+
+The reward function is based on providing +1 for a yellow banana, and -1 for a blue banana respectively with a discount rate ɣ = 0.99. A replay memory of size 100.000 was selected with mini-batch size of 64.
 
 ReLU (Rectified Linear Unit) is used for the activation function.
 
