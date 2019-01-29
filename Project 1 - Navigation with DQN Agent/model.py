@@ -38,11 +38,11 @@ class QNetwork(nn.Module):
         """
 
         # ReLU
-        # x = F.relu(self.fc1(state))
-        # x = F.relu(self.fc2(x))
+        x = F.relu(self.fc1(state))
+        x = F.relu(self.fc2(x))
         # Leaky ReLU
-        x = F.leaky_relu(self.fc1(state), negative_slope=0.2)
-        x = F.leaky_relu(self.fc2(x), negative_slope=0.2)
+        # x = F.leaky_relu(self.fc1(state), negative_slope=0.2)
+        # x = F.leaky_relu(self.fc2(x), negative_slope=0.2)
 
         logits = self.fc3(x)             # No e.g. softmax, return logits, raw output
         return logits
