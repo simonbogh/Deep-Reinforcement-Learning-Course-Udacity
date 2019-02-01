@@ -3,7 +3,6 @@ import torch
 import random
 from agent import Agent
 
-
 print('========================================')
 '''Evaluate agent: load trained weights from checkpoint file
 '''
