@@ -15,13 +15,13 @@ The state space has 37 dimensions containing the agent's velocity and distance m
 The task is episodic, and the environment is considered solved when the agent gets an average score of +13 over 100 consecutive episodes.
 
 ### Learning Algorithm
-The learning algorithm applied is a Deep Q-Network (DQN) [Deepmind](http://www.davidqiu.com:8888/research/nature14236.pdf). The model architecture consists of an input layer of size 37, two fully-connection hidden layers, and an output layer of size 4 (for four actions). 
+The learning algorithm applied is a Deep Q-Network (DQN) [Deepmind](http://www.davidqiu.com:8888/research/nature14236.pdf). The model architecture consists of an input layer of size 37, two fully-connection hidden layers, and an output layer of size 4 (for four actions).
 
 Different sizes have been tried for the two hidden layers: (32,32), (64,64), (128,64), and (128,128). Though performance was very similar, (64,64) and (128,128) seemed to perform slightly better. Se result section below for graphs.
 
 Different learning rates were selected and tested with the (64,64) hidden layer sizes. The following learning rates were tested: 0.005, 0.001, and 0.0005. Se result section below for graphs.
 
-ε-greedy is applied as the policy. Epsilon starts at 1.0, decays with a rate of 0.995, and ends at a minimum of 0.1. 
+ε-greedy is applied as the policy. Epsilon starts at 1.0, decays with a rate of 0.995, and ends at a minimum of 0.1.
 
 The reward function is based on providing +1 for a yellow banana, and -1 for a blue banana respectively with a discount rate ɣ = 0.99. A replay memory of size 100.000 was selected with mini-batch size of 64.
 
@@ -62,7 +62,7 @@ It is recommended to install other dependencies through **Anconda**: https://ana
 * pickle
 * numpy
 
-To create an environment it is recommended to follow the guildelines at the Anaconda website. In general you would want to do the following
+To create an Anaconda virtual environment for Python it is recommended to follow the guildelines at the Anaconda website. In general you would want to do the following in the terminal:
 
 **Linux and Mac:**
 
@@ -71,10 +71,10 @@ To create an environment it is recommended to follow the guildelines at the Anac
 
 **Windows**
 
-    conda create --name drlnd python=3.6 
+    conda create --name drlnd python=3.6
     activate drlnd
 
-The unity environment needed for this assignment can be found in the folder **/unity-ml-agents/**.
+The unity environment needed for this assignment can be found in the folder **/unity-ml-agents/**. Here you will find environments for Mac, Linux, and Windows.
 
 ### Running the code
 
