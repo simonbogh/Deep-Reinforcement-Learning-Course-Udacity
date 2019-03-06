@@ -34,13 +34,13 @@ To create an Anaconda virtual environment for Python it is recommended to follow
 
 **Linux and Mac:**
 
-conda create --name drlnd python=3.6
-source activate drlnd
+    conda create --name drlnd python=3.6
+    source activate drlnd
 
 **Windows**
 
-conda create --name drlnd python=3.6
-activate drlnd
+    conda create --name drlnd python=3.6
+    activate drlnd
 
 The unity environment needed for this assignment can be found in the folder **/unity-ml-agents/**. Here you will find environments for Mac, Linux, and Windows.
 
@@ -50,11 +50,11 @@ The unity environment needed for this assignment can be found in the folder **/u
 
 Before training the agent, hyperparameters can be set in **ddpg_agent.py**. If you want to change the neural network, do so in **ddpg_model.py**. To start training the agent run the following command:
 
-$ python train_ddpg_agent.py
+    $ python train_ddpg_agent.py
 
 tensorboard can be used to visualise the training process (mean reward) in your browser. Start tensprboard by running the following command:
 
-$ tensorboard --logdir runs
+    $ tensorboard --logdir runs
 
 *runs* is a folder created by tensorboardX in the root folder. It contains the events defined in *train_ddpg_agent.py*.
 
