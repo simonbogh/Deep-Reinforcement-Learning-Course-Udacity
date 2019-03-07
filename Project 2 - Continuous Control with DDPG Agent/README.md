@@ -5,6 +5,9 @@ In this project a double-jointed arm is trained to reach target locations. A rew
 
 The implementation details can be found in **Report.md**.
 
+![training_results](images/reacher_environment.gif)
+
+
 ## Project Details
 
 ### Environment Details
