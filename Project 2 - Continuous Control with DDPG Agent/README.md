@@ -76,7 +76,7 @@ Below are the training results from Version 1 and 2 of the environment. First, V
 Detailed results are found in **REPORT.md**
 
 ### Version 2: 20 agents
-![training_results](images/training_results.jpg)
+![training_results](images/training_results_20_agents.jpg)
 
 <!-- <img src="images/training_results.jpg" alt="Training Results" width="300"> -->
 
