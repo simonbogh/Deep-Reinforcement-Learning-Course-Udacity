@@ -66,6 +66,10 @@ Video: [YouTube.com](https://youtu.be/laOg6DYBc6c)
 
 Detailed results are found in **Report.md**
 
+![training_results](images/training_results.jpg)
+
+<!-- <img src="images/training_results.jpg" alt="Training Results" width="300"> -->
+
 ## License
 GPL-3.0
 
