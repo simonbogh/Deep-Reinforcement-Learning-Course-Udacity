@@ -3,7 +3,7 @@ This folder contains the solution to project 2 on continous control for the Udac
 
 In this project a double-jointed arm is trained to reach target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of the agent is to maintain its position at the target location for as many time steps as possible.
 
-The implementation details can be found in **REPORT.md**.
+The implementation details can be found in [**REPORT.md**](REPORT.md).
 
 ![training_results](images/reacher_environment.gif)
 
@@ -73,7 +73,7 @@ Video: [YouTube.com](https://youtu.be/laOg6DYBc6c)
 
 Below are the training results from Version 1 and 2 of the environment. First, Version 2 was solved. Afterwards Version 1 was trained with identical network architecture and hyper-parameters as Version 2.
 
-Detailed results are found in **REPORT.md**
+Detailed results are found in [**REPORT.md**](REPORT.md).
 
 ### Version 2: 20 agents
 ![training_results](images/training_results_20_agents.jpg)
