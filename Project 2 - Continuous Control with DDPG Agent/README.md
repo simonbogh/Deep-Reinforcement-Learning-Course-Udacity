@@ -16,8 +16,8 @@ The observation space consists of 33 variables corresponding to position, rotati
 Each action is a vector with four numbers, corresponding to **torque applicable to two joints**. Every entry in the action vector should be **a number between -1 and 1**.
 
 For this project, two separate versions of the *Reacher* Unity environment are provided:
-* The first version contains a single agent
-* The second version contains 20 identical agents, each with its own copy of the environment  
+* Version 1: The first version contains a single agent
+* Version 2: The second version contains 20 identical agents, each with its own copy of the environment  
 
 The task is episodic, and the environment is considered solved when the agent gets an average score of +30 over 100 consecutive episodes.
 
@@ -64,8 +64,12 @@ tensorboard can be used to visualise the training process (mean reward) in your 
 When training is done, the best model weights are saved as **checkpoint_actor.pth** and **checkpoint_critic.pth**.
 
 ## Results
+<!--
 **FIX VIDEO**
 Video: [YouTube.com](https://youtu.be/laOg6DYBc6c)
+-->
+
+Below are the training results from Version 1 and 2 of the environment. First Version 2 was solved. Afterwards Version 1 trained with the network architecture and hyper-parameters.
 
 Detailed results are found in **Report.md**
 
