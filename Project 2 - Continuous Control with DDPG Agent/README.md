@@ -3,7 +3,7 @@ This folder contains the solution to project 2 on continous control for the Udac
 
 In this project a double-jointed arm is trained to reach target locations. A reward of +0.1 is provided for each step that the agent's hand is in the goal location. Thus, the goal of the agent is to maintain its position at the target location for as many time steps as possible.
 
-The implementation details can be found in **Report.md**.
+The implementation details can be found in **REPORT.md**.
 
 ![training_results](images/reacher_environment.gif)
 
@@ -51,7 +51,9 @@ The unity environment needed for this assignment can be found in the folder **/u
 
 **Training the agent**
 
-Before training the agent, hyperparameters can be set in **ddpg_agent.py**. If you want to change the neural network, do so in **ddpg_model.py**. To start training the agent run the following command:
+Before training the agent, hyper-parameters can be set in **ddpg_agent.py**. If you want to change the neural networks for the actor and critic, do so in **ddpg_model.py**. 
+
+To start training the agent run the following command:
 
     $ python train_ddpg_agent.py
 
@@ -59,7 +61,7 @@ tensorboard can be used to visualise the training process (mean reward) in your 
 
     $ tensorboard --logdir runs
 
-*runs* is a folder created by tensorboardX in the root folder. It contains the events defined in *train_ddpg_agent.py*.
+*"runs"* is a folder created by tensorboardX in the root folder. It contains the events defined in *train_ddpg_agent.py*.
 
 When training is done, the best model weights are saved as **checkpoint_actor.pth** and **checkpoint_critic.pth**.
 
@@ -69,9 +71,9 @@ When training is done, the best model weights are saved as **checkpoint_actor.pt
 Video: [YouTube.com](https://youtu.be/laOg6DYBc6c)
 -->
 
-Below are the training results from Version 1 and 2 of the environment. First Version 2 was solved. Afterwards Version 1 trained with the network architecture and hyper-parameters.
+Below are the training results from Version 1 and 2 of the environment. First, Version 2 was solved. Afterwards Version 1 was trained with identical network architecture and hyper-parameters as Version 2.
 
-Detailed results are found in **Report.md**
+Detailed results are found in **REPORT.md**
 
 ### Version 2: 20 agents
 ![training_results](images/training_results.jpg)
