@@ -66,9 +66,15 @@ Video: [YouTube.com](https://youtu.be/laOg6DYBc6c)
 
 Detailed results are found in **Report.md**
 
+### Version 2: 20 agents
 ![training_results](images/training_results.jpg)
 
 <!-- <img src="images/training_results.jpg" alt="Training Results" width="300"> -->
+
+
+### Version 1: 1 agent
+![training_results](images/training_results_1_agent_vs_20_agents.jpg)
+
 
 ## License
 GPL-3.0
