@@ -164,16 +164,13 @@ def trainDDPG(n_episodes=1000, print_every=10):
     for i_episode in range(1, n_episodes+1):
         # Reset the environment when starting a new episode
         # 'train_mode=True': runs with small window and much faster
-        env_info = env.reset(train_mode=True)[brain_name]   # Reset the environment.
-        # state = env_info.vector_observations[0]             # Get the current initial state (for the first agent)
-        state = env_info.vector_observations                # Get the current initial state (for the first agent)
-        # state = env.reset()
-        agent.reset()
-        score = np.zeros(num_agents)
+        env_info = env.reset(train_mode=True)[brain_name]   # Reset the environment
+        state = env_info.vector_observations                # Get the current initial state for all agents
+        agent.reset()                                       # Reset agent noise
+        score = np.zeros(num_agents)                        # Initialize the score
 
+        # Train until episode terminates (done == True)
         for t in count():
-        # while True:
-        # for t in range(max_t):
             action = agent.act(state, add_noise=True)
 
             # Step using action and get next state
