@@ -5,7 +5,7 @@
 <!--Description of the implementation.-->
 For the second project the actor-critic method **Deep Deterministic Policy Gradient (DDPG)** was applied.
 
-Paper: [](https://arxiv.org/abs/1509.02971)
+Paper: [Lillicrap, Timothy P., et al. "Continuous control with deep reinforcement learning." arXiv preprint arXiv:1509.02971 (2015).](https://arxiv.org/abs/1509.02971)
 
 ### Learning Algorithm
 <!-- Clearly describe the learning algorithm, along with the chosen hyperparameters. -->
