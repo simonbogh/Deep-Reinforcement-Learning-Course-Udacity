@@ -99,34 +99,6 @@ print('There are {} agents. Each observes a state with length: {}'.format(states
 print('The state for the first agent looks like:', states[0])
 
 
-
-
-# ### 3. Take Random Actions in the Environment
-# In the next code cell, you will learn how to use the Python API to control the agent and receive feedback from the environment.
-# Once this cell is executed, you will watch the agent's performance, if it selects an action at random with each time step.  A window should pop up that allows you to observe the agent, as it moves through the environment.
-# Of course, as part of the project, you'll have to change the code so that the agent is able to use its experience to gradually choose better actions when interacting with the environment!
-
-# env_info = env.reset(train_mode=True)[brain_name]     # reset the environment
-# states = env_info.vector_observations                  # get the current state (for each agent)
-# scores = np.zeros(num_agents)                          # initialize the score (for each agent)
-# while True:
-#     actions = np.random.randn(num_agents, action_size) # select an action (for each agent)
-#     actions = np.clip(actions, -1, 1)                  # all actions between -1 and 1
-#     env_info = env.step(actions)[brain_name]           # send all actions to tne environment
-#     next_states = env_info.vector_observations         # get next state (for each agent)
-#     rewards = env_info.rewards                         # get reward (for each agent)
-#     dones = env_info.local_done                        # see if episode finished
-#     scores += env_info.rewards                         # update the score (for each agent)
-#     states = next_states                               # roll over states to next time step
-#     if np.any(dones):                                  # exit loop if episode finished
-#         break
-# print('Total score (averaged over agents) this episode: {}'.format(np.mean(scores)))
-
-# When finished, close the environment.
-
-
-
-
 print('========================================')
 # ### Training the DDPG agent to solve the environment ### #
 # In the following the training takes place.
@@ -175,51 +147,58 @@ def trainDDPG(n_episodes=1000, print_every=10):
 
             # Step using action and get next state
             env_info = env.step(action)[brain_name]         # Send the action to the environment
-            # next_state = env_info.vector_observations[0]    # Get the next state
-            next_state = env_info.vector_observations    # Get the next state
+            # next_state = env_info.vector_observations[0]  # Get the next state
+            next_state = env_info.vector_observations       # Get the next state
 
             # Get reward
-            reward = env_info.rewards                    # Get the reward
-            done = env_info.local_done                   # See if episode has finished
+            reward = env_info.rewards                       # Get the reward
+            done = env_info.local_done                      # See if episode has finished
 
             # next_state, reward, done, _ = env.step(action)
             agent.step(state, action, reward, next_state, done, t)
-            state = next_state
-            score += reward
+            state = next_state                              # Roll over the state to next time step
+            score += reward                                 # Update the score
 
+            # Exit loop if episode finished
             if np.any(done):
                 break
 
+        # Save scores (rewards) for later
         scores_deque.append(score)
         scores.append(score)
         print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_deque)), end="")
+
+        # Save the actor and critic model parameters (weights and biases) to files
         torch.save(agent.actor_local.state_dict(), 'checkpoint_actor.pth')
         torch.save(agent.critic_local.state_dict(), 'checkpoint_critic.pth')
 
+        # Print info to console
         if i_episode % print_every == 0:
             print('\rEpisode {}\tAverage Score: {:.2f}'.format(i_episode, np.mean(scores_deque)))
 
-        # Write mean score to tensorboardX
+        # Write mean score to tensorboard
         writer.add_scalar('data/scalar1', np.mean(score), i_episode)
-
-
 
     return scores
 
-scores = trainDDPG()
+# Call function to start training for n_episodes
+scores = trainDDPG(n_episodes=200)
 
 print('Total score (averaged over agents) this episode: {}'.format(np.mean(scores)))
 
-
-# export scalar data to JSON for external processing
+# Export tensorboard scalar data to JSON for external processing
 writer.export_scalars_to_json("./all_scalars.json")
 writer.close()
 
-
-plt.plot(np.arange(1, len(scores)+1), scores)
-plt.ylabel('Score')
-plt.xlabel('Episode #')
-plt.show()
-
+# Close the unity environment when done
 env.close()
 
+# Plot the scores
+# plt.plot(np.arange(1, len(scores)+1), scores)
+# plt.ylabel('Score')
+# plt.xlabel('Episode #')
+# plt.show()
+
+print('========================================')
+print('Training done')
+print('========================================')
