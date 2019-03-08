@@ -84,6 +84,8 @@ Detailed results are found in [**REPORT.md**](REPORT.md).
 ### Version 1: 1 agent
 ![training_results](images/training_results_1_agent_vs_20_agents.jpg)
 
+## Acknowledgement
+The initial code is derived from the DDPG example from the Udacity github repository, and then built upon and tuned for the given case.
 
 ## License
 GPL-3.0
