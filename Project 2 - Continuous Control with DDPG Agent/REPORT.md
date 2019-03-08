@@ -59,7 +59,7 @@ Version 1 was solved after 300 episodes. Version 2 was solved after 56 episodes.
 
 
 ## Ideas for Future Work
-* It was difficult to tune the hyper-parameters for DDPG. It feels like a combination between having domain knowledge, *tricks* from other papers, and luck. It would be interesting to see if other techniques suchs as TRPO and PPO would help here making it more stabled and easier to tune 
+* It was somewhat difficult to tune the hyper-parameters for DDPG. It feels like a combination between having domain knowledge, *tricks* from other papers, and luck. It would be interesting to see if other techniques suchs as TRPO and PPO would help here making it more stable and easier to tune 
 * It may be relevant to also reduce the noise introduced and/or lower the learning rate more to see what effect this would have
 * Overall it would be great to see how fast the single agent environment can be solved since transferring such scenarios from simulation to the real-world often does not allow you to have 20 robots to train on, but maybe only one or two robots. A big future challenge will definitely be to close the simulation-to-reality gap for deep robotics learning
 
