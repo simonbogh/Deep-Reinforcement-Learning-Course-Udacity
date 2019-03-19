@@ -90,9 +90,13 @@ Detailed results are found in [**REPORT.md**](REPORT.md).
 
 **128 nodes in each hidden layer**
 
+Solved around episode 2150.
+
 ![training_results_128_128](images/training_128_128.jpg)
 
 **256 nodes in each hidden layer + batch normalization on the input**
+
+Solved around episode 1150.
 
 ![training_results_256_256](images/training_256_256_batchnorm.jpg)
 
