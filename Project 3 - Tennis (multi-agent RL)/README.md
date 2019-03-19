@@ -88,7 +88,14 @@ Below are the training results from solving the environment.
 
 Detailed results are found in [**REPORT.md**](REPORT.md).
 
-![training_results](images/training_128_128.jpg)
+**128 nodes in each hidden layer**
+
+![training_results_128_128](images/training_128_128.jpg)
+
+**256 nodes in each hidden layer + batch normalization on the input**
+
+![training_results_256_256](images/training_256_256_batchnorm.jpg)
+
 
 ## Acknowledgement
 The initial code is derived from the DDPG example from the Udacity github repository, and then built upon and tuned for the given case.
