@@ -62,7 +62,10 @@ from ddpg_agent import DDPGAgent
 # Environments for different platforms (Windows, Linux, MacOS) can be found in
 # the folder /unity-ml-agents/. There are also headless versions available for Linux
 # env = UnityEnvironment(file_name='unity-ml-agents/Reacher_1_agent.app')
-env = UnityEnvironment(file_name='unity-ml-agents/Reacher_20_agents.app')
+# env = UnityEnvironment(file_name='unity-ml-agents/Reacher_20_agents.app')
+
+# Run without rendering: no_graphics=True
+env = UnityEnvironment(file_name='unity-ml-agents/Reacher_20_agents.app', no_graphics=True)
 
 # Environments contain **_brains_** which are responsible for deciding the
 # actions of their associated agents. Here we check for the first brain
